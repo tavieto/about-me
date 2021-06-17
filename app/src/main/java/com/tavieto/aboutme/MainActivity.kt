@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             addNickname(it)
         }
+
+        binding.nicknameText.setOnClickListener {
+            updateNickname(it)
+        }
     }
 
     private fun addNickname(view: View) {
@@ -33,6 +37,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateNickname(view: View) {
+        binding.nicknameEdit.visibility = View.VISIBLE
+        binding.button.visibility = View.VISIBLE
+        binding.nicknameText.visibility = View.GONE
 
+        binding.nicknameEdit.requestFocus()
     }
 }
